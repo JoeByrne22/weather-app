@@ -1,0 +1,27 @@
+.hot {
+  color: sandybrown;
+}
+
+.cold {
+  color: lightblue;
+}
+
+body {
+  background: linear-gradient(#e66465, #9198e5);
+  height: 100vh;
+}
+
+.temperature {
+  font-size: 5rem;
+  margin: 1rem;
+}
+
+.description {
+  font-size: 2rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
