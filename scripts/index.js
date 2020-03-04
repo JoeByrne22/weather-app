@@ -1,4 +1,13 @@
 window.addEventListener("load", () => {
+  // getting the time...
+
+  var d = new Date();
+  var n = d.toUTCString();
+  var e = document.querySelector("#date");
+  e.innerHTML = n;
+
+  //getting weather, compared to where you are in the world
+
   let long;
   let lat;
 
@@ -16,6 +25,13 @@ window.addEventListener("load", () => {
         })
         .then(data => {
           console.log(data);
+
+          const { temperature, icon } = data.currently;
+
+          console.log("temperature", temperature);
+          console.log("icon", icon);
+          console.log("timeZone", data.timezone);
+          console.log("summary", data.hourly.summary);
         });
     });
   }
